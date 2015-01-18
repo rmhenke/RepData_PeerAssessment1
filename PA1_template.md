@@ -1,12 +1,6 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-author: "Robert M Henke"
-date: "Saturday, December 13, 2014"
-
-output:
-        html_document:
-                keep_md: true
----
+# Reproducible Research: Peer Assessment 1
+Robert M Henke  
+Sunday, January, 18, 2015  
 
 ### Loading and preprocessing the data
 
@@ -14,14 +8,7 @@ Reads data from file, `activity.csv` (located in folder `repdata_data_activity` 
 
 ```r
 library(data.table)
-```
 
-```
-## data.table 1.9.4  For help type: ?data.table
-## *** NB: by=.EACHI is now explicit. See README to restore previous behaviour.
-```
-
-```r
 file_path <- paste0(getwd(),"/repdata_data_activity/activity.csv")
 
 activity_DT <- fread(file_path, stringsAsFactors=FALSE)
@@ -44,7 +31,7 @@ hist(total_steps_daily$total_steps, main="Daily Activity",breaks=6, xlab="Total 
      ylab="Number of Days", col="grey"  , xlim = c(0,25000),ylim = c(0,35))
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+![](PA1_templatet_files/figure-html/unnamed-chunk-3-1.png) 
 
 Calculates the mean and median of the total steps taken per day from the supplied dataset           
 
@@ -79,7 +66,7 @@ plot(0:287, mean_step_5m_interval$mean_steps, type = "l", main = "Mean steps per
         axis(side = 1, at = c(0,73,145,215,288), labels = c("00:00", "06:00", "12:00", "18:00","23:55"))
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
+![](PA1_templatet_files/figure-html/unnamed-chunk-6-1.png) 
 
 ###Imputing missing values
 
@@ -114,7 +101,7 @@ hist(imputed_total_steps_daily$total_steps, main="Daily Activity",breaks=6, xlab
      ylab="Number of Days", col="purple"  , xlim = c(0,25000),ylim = c(0,35))
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
+![](PA1_templatet_files/figure-html/unnamed-chunk-10-1.png) 
 
 Calculates the mean and median of the total steps taken per day from the imputated dataset    
 
@@ -171,5 +158,5 @@ xyplot(mean_steps~interval_num | day_type,
        data=wk_df)
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
+![](PA1_templatet_files/figure-html/unnamed-chunk-13-1.png) 
 

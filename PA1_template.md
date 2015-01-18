@@ -31,7 +31,7 @@ hist(total_steps_daily$total_steps, main="Daily Activity",breaks=6, xlab="Total 
      ylab="Number of Days", col="grey"  , xlim = c(0,25000),ylim = c(0,35))
 ```
 
-![](PA1_templatet_files/figure-html/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
 Calculates the mean and median of the total steps taken per day from the supplied dataset           
 
@@ -66,7 +66,7 @@ plot(0:287, mean_step_5m_interval$mean_steps, type = "l", main = "Mean steps per
         axis(side = 1, at = c(0,73,145,215,288), labels = c("00:00", "06:00", "12:00", "18:00","23:55"))
 ```
 
-![](PA1_templatet_files/figure-html/unnamed-chunk-6-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
 
 ###Imputing missing values
 
@@ -101,7 +101,7 @@ hist(imputed_total_steps_daily$total_steps, main="Daily Activity",breaks=6, xlab
      ylab="Number of Days", col="purple"  , xlim = c(0,25000),ylim = c(0,35))
 ```
 
-![](PA1_templatet_files/figure-html/unnamed-chunk-10-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
 Calculates the mean and median of the total steps taken per day from the imputated dataset    
 
@@ -158,5 +158,5 @@ xyplot(mean_steps~interval_num | day_type,
        data=wk_df)
 ```
 
-![](PA1_templatet_files/figure-html/unnamed-chunk-13-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
 
